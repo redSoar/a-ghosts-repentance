@@ -22,6 +22,10 @@ public class Interactables : MonoBehaviour
         if (collision.collider.tag == "Memory")
         {
             Debug.Log("Press 'E' to interact");
+        } 
+        else if (collision.collider.tag == "Door")
+        {
+            Debug.Log("Press 'M' to go through door");
         }
     }
 }
