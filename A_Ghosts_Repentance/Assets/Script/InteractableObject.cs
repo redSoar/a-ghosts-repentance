@@ -7,6 +7,7 @@ public class InteractableObject : MonoBehaviour
 {
 
     bool hasCollided = false;
+    public String interaction;
     
     // Start is called before the first frame update
     void Start()
@@ -21,7 +22,7 @@ public class InteractableObject : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Deez nuts");
+                Debug.Log(interaction);
             }
         }
     }
