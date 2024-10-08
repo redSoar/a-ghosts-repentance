@@ -19,7 +19,7 @@ public class Interactables : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Memory")
+        if (collision.collider.tag == "Interactable")
         {
             Debug.Log("Press 'E' to interact");
         } 
