@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,23 +6,26 @@ using UnityEngine;
 public class InteractableObject : MonoBehaviour
 {
 
-    private bool interacted = false;
-
-    protected void OnCollision(GameObject collideObject)
+    // Start is called before the first frame update
+    void Start()
     {
-        if (Input.GetKey(KeyCode.E))
-        {
-            OnInteract();
-        }
+
     }
 
-
-    protected virtual void OnInteract()
+    // Update is called once per frame
+    void Update()
     {
-        if (!interacted)
+
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.collider.tag == "Player")
         {
-            interacted = true;
-            Debug.Log("Interacted with" + name);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Deez nuts");
+            }
         }
     }
 
