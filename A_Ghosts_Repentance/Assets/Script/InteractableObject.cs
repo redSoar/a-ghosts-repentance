@@ -1,29 +1,47 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class InteractableObject : MonoBehaviour
 {
 
     bool hasCollided = false;
-    public String interaction;
-    
+    public TextMeshProUGUI textField;
+    bool talking = false;
+    [TextArea(3, 3)]
+    public string[] dialogueLines;
+    public GameObject interact;
+    private int currentDialogueIdx;
+    bool chatRadius = false;
+    public GameObject dialogueBox;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        if (textField == null)
+        {
+            textField = GameObject.FindGameObjectWithTag("Text").GetComponent<TextMeshProUGUI>();
+            dialogueBox.SetActive(false);
+        }
+        textField.text = "";
+        interact.SetActive(false);
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
-        if (hasCollided)
+        if (Input.GetKeyDown(KeyCode.E) && dialogueLines.Length > 0 && chatRadius)
         {
-            if (Input.GetKeyDown(KeyCode.E))
-            {
-                Debug.Log(interaction);
-            }
+            dialogueBox.SetActive(true);
+            Dialogue();
+        }
+
+        if (talking == false)
+        {
+            dialogueBox.SetActive(false);
         }
     }
 
@@ -40,6 +58,20 @@ public class InteractableObject : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             hasCollided = false;
+        }
+    }
+
+    public void Dialogue()
+    {
+        if (currentDialogueIdx < dialogueLines.Length)
+        {
+            textField.text = dialogueLines[currentDialogueIdx];
+            currentDialogueIdx++;
+        }
+        else
+        {
+            currentDialogueIdx = 0;
+
         }
     }
 
