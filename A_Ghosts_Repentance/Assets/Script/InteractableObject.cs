@@ -1,22 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
-using UnityEngine.AI;
+using TMPro;
 
 public class InteractableObject : MonoBehaviour
 {
+    private bool hasCollided = false;
+    private int currentDialogueIdx = 0;
 
-    bool hasCollided = false;
     public TextMeshProUGUI textField;
-    bool talking = false;
-    [TextArea(3, 3)]
-    public string[] dialogueLines;
-    public GameObject interact;
-    private int currentDialogueIdx;
-    bool chatRadius = false;
     public GameObject dialogueBox;
+    public string[] dialogueLines;
 
     // Start is called before the first frame update
     void Start()
@@ -24,55 +16,49 @@ public class InteractableObject : MonoBehaviour
         if (textField == null)
         {
             textField = GameObject.FindGameObjectWithTag("Text").GetComponent<TextMeshProUGUI>();
-            dialogueBox.SetActive(false);
         }
+        dialogueBox.SetActive(false);
         textField.text = "";
-        interact.SetActive(false);
     }
 
-    // Update is called once per frame
-    public void Update()
+    public void Dialogue()
     {
-        if (Input.GetKeyDown(KeyCode.E) && dialogueLines.Length > 0 && chatRadius)
+        if (dialogueLines.Length > 0)
         {
-            dialogueBox.SetActive(true);
-            Dialogue();
-        }
-
-        if (talking == false)
-        {
-            dialogueBox.SetActive(false);
+            if (currentDialogueIdx < dialogueLines.Length)
+            {
+                dialogueBox.SetActive(true);
+                textField.text = dialogueLines[currentDialogueIdx];
+                currentDialogueIdx++;
+            }
+            else
+            {
+                EndDialogue();
+            }
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void EndDialogue()
     {
-        if (collision.collider.tag == "Player")
+        currentDialogueIdx = 0;
+        dialogueBox.SetActive(false); 
+        textField.text = "";
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
         {
             hasCollided = true;
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.collider.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
             hasCollided = false;
+            EndDialogue(); 
         }
     }
-
-    public void Dialogue()
-    {
-        if (currentDialogueIdx < dialogueLines.Length)
-        {
-            textField.text = dialogueLines[currentDialogueIdx];
-            currentDialogueIdx++;
-        }
-        else
-        {
-            currentDialogueIdx = 0;
-
-        }
-    }
-
 }
