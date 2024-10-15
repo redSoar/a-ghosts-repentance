@@ -298,8 +298,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25f4187ae34b2ac438866648fd8f3e1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nametext: {fileID: 0}
-  dialogue: 
 --- !u!1 &217520195
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,11 +442,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textField: {fileID: 1739301460}
+  dialogueBox: {fileID: 1103551584}
   dialogueLines:
   - Hello!
   - Is it me you are looking for?
-  interact: {fileID: 0}
-  dialogueBox: {fileID: 1103551584}
 --- !u!1 &378988095
 GameObject:
   m_ObjectHideFlags: 0
