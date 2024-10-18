@@ -446,6 +446,11 @@ MonoBehaviour:
   dialogueLines:
   - Hello!
   - Is it me you are looking for?
+  choiceA: []
+  choiceB: []
+  is_choice: 0
+  choice1: 
+  choice2: 
 --- !u!1 &378988095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1894,7 +1899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1739301459
 RectTransform:
   m_ObjectHideFlags: 0
