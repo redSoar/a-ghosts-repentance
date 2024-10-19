@@ -64,6 +64,7 @@ public class InteractableObject : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             hasCollided = true;
+            Debug.Log("i vant to keel myself");
         }
     }
 
