@@ -59,9 +59,9 @@ public class InteractableObject : MonoBehaviour
     }
 
     // Trigger player interaction
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
             hasCollided = true;
             Debug.Log("i vant to keel myself");
@@ -69,9 +69,9 @@ public class InteractableObject : MonoBehaviour
     }
 
     // Reset when player leaves
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
             hasCollided = false;
             EndDialogue();

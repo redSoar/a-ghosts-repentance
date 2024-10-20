@@ -14,25 +14,25 @@ public class Interactables : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.CompareTag("Interactable") || collision.CompareTag("Door"))
+        if (collision.collider.CompareTag("Interactable") || collision.collider.CompareTag("Door"))
         {
             interactableObject = collision.gameObject;
             canInteract = true;
 
-            if (collision.CompareTag("Interactable"))
+            if (collision.collider.CompareTag("Interactable"))
             {
                 Debug.Log("Press 'E' to interact");
             }
-            else if (collision.CompareTag("Door"))
+            else if (collision.collider.CompareTag("Door"))
             {
                 Debug.Log("Press 'M' to go through door");
             }
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject == interactableObject)
         {
