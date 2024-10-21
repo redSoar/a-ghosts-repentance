@@ -119,6 +119,7 @@ public class InteractableObject : MonoBehaviour
         isWaitingForChoice = true;
         textField.text = choice1 + "\n" + choice2; // Display choice options
         Debug.Log("Displaying choices: " + choice1 + " | " + choice2);
+        Choice();
     }
 
     // Choice method to handle the player's input
