@@ -74,7 +74,7 @@ public class InteractableObject : MonoBehaviour
     // Trigger player interaction
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
             hasCollided = true;
             Debug.Log("Player collided with interactable object");
@@ -83,7 +83,8 @@ public class InteractableObject : MonoBehaviour
                 Debug.Log("Starting interaction from first dialogue line.");
                 currentDialogueIdx = 0; // Ensure dialogue starts from the first element
                 isInteracting = true;
-                StartCoroutine(ListenForInput());
+                //StartCoroutine(ListenForInput());
+                Dialogue();
             }
         }
     }
