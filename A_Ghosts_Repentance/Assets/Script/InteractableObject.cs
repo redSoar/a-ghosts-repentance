@@ -1,61 +1,74 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class InteractableObject : MonoBehaviour
 {
     private bool hasCollided = false;
-    private int currentDialogueIdx = 0;
+    private int currentDialogueIdx = 0; // Track current dialogue index
     private bool isWaitingForChoice = false;
+    private bool isInteracting = false; // State to track if interaction is in progress
+    private bool isDialogueInProgress = false; // Track if dialogue is running
 
     public TextMeshProUGUI textField;
     public GameObject dialogueBox;
-    public string[] dialogueLines;
+    public string[] dialogueLines; // Dialogue lines array
     public string[] choiceA;
     public string[] choiceB;
-    public bool is_choice;
+    public bool is_choice = false;
     public string choice1;
     public string choice2;
 
-    // Start is called before the first frame update
     void Start()
     {
-        if (textField == null)
-        {
-            textField = GameObject.FindGameObjectWithTag("Text").GetComponent<TextMeshProUGUI>();
-        }
-        dialogueBox.SetActive(false);
+        ResetState(); // Ensure state is reset at start
+    }
+
+    // Reset all interaction state variables
+    private void ResetState()
+    {
+        Debug.Log("Resetting state");
         textField.text = "";
+        dialogueBox.SetActive(false);
+        currentDialogueIdx = 0; // Ensure index starts at the first element
+        isInteracting = false;  // Ensure interaction is false initially
+        isDialogueInProgress = false;
+        isWaitingForChoice = false;
     }
 
     // Dialogue progression method
     public void Dialogue()
     {
-        if (is_choice && !isWaitingForChoice) // Check if this is a choice moment
+        if (isDialogueInProgress) return; // Prevent multiple dialogue interactions in the same frame
+        
+        isDialogueInProgress = true; // Mark dialogue as in progress
+
+        if (is_choice && !isWaitingForChoice)
         {
-            DisplayChoice(); // Call the method to show choices
+            DisplayChoice(); // Call method to show choices
         }
-        else if (!isWaitingForChoice && dialogueLines.Length > 0) // Normal dialogue
+        else if (!isWaitingForChoice && currentDialogueIdx < dialogueLines.Length)
         {
-            if (currentDialogueIdx < dialogueLines.Length)
-            {
-                dialogueBox.SetActive(true);
-                textField.text = dialogueLines[currentDialogueIdx]; // Show current dialogue
-                currentDialogueIdx++;
-            }
-            else
-            {
-                EndDialogue(); // End if dialogue is finished
-            }
+            dialogueBox.SetActive(true);
+            Debug.Log("Displaying element " + currentDialogueIdx + ": " + dialogueLines[currentDialogueIdx]); // Debug to track dialogue
+            textField.text = dialogueLines[currentDialogueIdx]; // Show current dialogue
+            textField.ForceMeshUpdate();
+            currentDialogueIdx++; // Move to the next line
         }
+        else if (currentDialogueIdx >= dialogueLines.Length)
+        {
+            EndDialogue(); // End if dialogue is finished
+        }
+
+        isDialogueInProgress = false; // Allow dialogue progression in next frame
     }
 
     // End dialogue and reset everything
     private void EndDialogue()
     {
-        currentDialogueIdx = 0;
-        dialogueBox.SetActive(false);
-        textField.text = "";
-        isWaitingForChoice = false; // Reset choice flag
+        Debug.Log("End of dialogue");
+        ResetState(); // Reset everything when dialogue ends
+        StopCoroutine("ListenForInput"); // Stop listening for input
     }
 
     // Trigger player interaction
@@ -64,7 +77,14 @@ public class InteractableObject : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             hasCollided = true;
-            Debug.Log("i vant to keel myself");
+            Debug.Log("Player collided with interactable object");
+            if (!isInteracting) // Start interaction if it's not already in progress
+            {
+                Debug.Log("Starting interaction from first dialogue line.");
+                currentDialogueIdx = 0; // Ensure dialogue starts from the first element
+                isInteracting = true;
+                StartCoroutine(ListenForInput());
+            }
         }
     }
 
@@ -74,7 +94,22 @@ public class InteractableObject : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             hasCollided = false;
+            Debug.Log("Player left the interaction zone, resetting dialogue.");
             EndDialogue();
+        }
+    }
+
+    // Coroutine to listen for input while the player is in range
+    private IEnumerator ListenForInput()
+    {
+        while (isInteracting) // Keep listening while interaction is active
+        {
+            if (Input.GetKeyDown(KeyCode.E)) // Listen for the 'E' key press
+            {
+                Debug.Log("Interacting with object");
+                Dialogue(); // Call the Dialogue method
+            }
+            yield return null; // Wait for next frame
         }
     }
 
@@ -82,7 +117,8 @@ public class InteractableObject : MonoBehaviour
     private void DisplayChoice()
     {
         isWaitingForChoice = true;
-        textField.text = choice1 + "\n" +choice2; // Display choice options
+        textField.text = choice1 + "\n" + choice2; // Display choice options
+        Debug.Log("Displaying choices: " + choice1 + " | " + choice2);
     }
 
     // Choice method to handle the player's input
@@ -102,23 +138,10 @@ public class InteractableObject : MonoBehaviour
     private void ProcessChoice(string[] chosenDialogue)
     {
         dialogueLines = chosenDialogue; // Set dialogue lines to the chosen branch
-        currentDialogueIdx = 0;         // Reset dialogue index for new choice
+        currentDialogueIdx = 0;         // Reset dialogue index for new choice dialogue branch
         is_choice = false;              // No more choices, continue dialogue
         isWaitingForChoice = false;     // Choice has been made, exit choice mode
+        Debug.Log("Choice made, continuing dialogue");
         Dialogue();                     // Continue dialogue based on choice
-    }
-
-    // Update method to continuously check for input
-    private void Update()
-    {
-        if (hasCollided && Input.GetKeyDown(KeyCode.E)) // Begin dialogue interaction
-        {
-            Dialogue();
-        }
-
-        if (isWaitingForChoice) // Check for player input during choice
-        {
-            Choice();
-        }
     }
 }

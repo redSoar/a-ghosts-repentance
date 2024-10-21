@@ -444,8 +444,11 @@ MonoBehaviour:
   textField: {fileID: 1739301460}
   dialogueBox: {fileID: 1103551584}
   dialogueLines:
-  - Hello!
-  - Is it me you are looking for?
+  - 90
+  - 4
+  - 3
+  - 2
+  - 1
   choiceA: []
   choiceB: []
   is_choice: 0
