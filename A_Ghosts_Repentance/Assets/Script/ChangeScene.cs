@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour
 {
     bool hasCollided = false;
+    public string nextScene;
 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,7 @@ public class ChangeScene : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.M))
             {
-                SceneManager.LoadScene("TopDownPlaytest");
+                SceneManager.LoadScene(nextScene);
             }
         }
     }
