@@ -4,7 +4,6 @@ using System.Collections;
 
 public class InteractableObject : MonoBehaviour
 {
-    private bool hasCollided = false;
     private int currentDialogueIdx = 0; // Track current dialogue index
     private bool isWaitingForChoice = false;
     private bool isInteracting = false; // State to track if interaction is in progress
@@ -76,7 +75,6 @@ public class InteractableObject : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
-            hasCollided = true;
             Debug.Log("Player collided with interactable object");
             if (!isInteracting) // Start interaction if it's not already in progress
             {
@@ -94,7 +92,6 @@ public class InteractableObject : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player"))
         {
-            hasCollided = false;
             Debug.Log("Player left the interaction zone, resetting dialogue.");
             EndDialogue();
         }
