@@ -2474,15 +2474,41 @@ MonoBehaviour:
   dialogueLines:
   - " Bully: Nice day today, huh? Too bad you can\u2019t see the sun in my shadow,
     shrimp! "
-  - What do you want?!
-  - "What\u2019s that shrimp?! Can\u2019t hear you from allllll the way down there! "
+  - 'Friend: l-leave me alone.......'
+  - "Bully: What\u2019s that shrimp?! Can\u2019t hear you from allllll the way down
+    there! "
+  - 'Friend: [whimpers] '
+  - 'You: ...'
+  - 'Friend: h-he-help me out here '
+  - 'Bully: Hmm? Oh, look who decided to weasel his way in. You have a problem? '
   choiceA:
-  - STOP PLEASE DO NOT HURT ME
+  - 'Friend: ..p-p-please...'
+  - "Bully: Heh.. That\u2019s what I thought... But seeing you pisses me off, so
+    your friend is gonna get it! "
+  - 'Friend: Wha-huh!!?!? Please, no! '
+  - 'You: *Turns Head Away*'
+  - 'Bully: Some friend you are! HA! I guess you really have no one shri- huh!?!?? '
+  - 'Friend: *Friend gets away and runs* '
+  - "Bully: GET BACK HE- shit! *Turns to you* I guess you\u2019ll just have to take
+    his place.... "
   choiceB:
-  - THAT'S WHAT I THOUGHT PUNK
+  - 'Bully:Aww got a lil tough guy here huh!! What are you going to do about it?! '
+  - 'You: urk!'
+  - "Bully: Yeah that\u2019s what I thought.... And just for that, your little shrimp
+    here is gonna get it! "
+  - 'Friend: Wha-huh!!?!? Please, no!  '
+  - 'You: *raises fists* leave... Leave my friend alone!*'
+  - 'Friend: *runs away* '
+  - "Bully: Oh what don\u2019t you look at that your shrimp of a \u201Cfriend\u201D
+    left you! I guess I\u2019ll just have to take it out on you!! "
+  - 'Teacher: What is going on here!  '
+  - 'Bully: Oh, shi-! '
+  - "Teacher: This is the last time! Let\u2019s go to the principal's office! "
+  - 'Friend: Thanks for sticking up for me. I know that was scary. '
+  - "You: MC: Y-yeah. I\u2019m glad you\u2019re safe. "
   is_choice: 1
-  choice1: (Press 1) "I want to kick your ass"
-  choice2: (Press 2) Cower
+  choice1: "Press[1]: \u201CUuhhhh... N-nothing, man....\u201D"
+  choice2: "Press [2]: ...y-y-yeah stop bullying my friend\u201D"
 --- !u!70 &790809588
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
