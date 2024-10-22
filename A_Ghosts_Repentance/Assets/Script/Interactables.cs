@@ -8,7 +8,7 @@ public class Interactables : MonoBehaviour
 
     void Update()
     {
-        if (canInteract && Input.GetKeyDown(KeyCode.E)) // If the player is near an interactable object and presses 'E'
+        if (canInteract && Input.GetKeyDown(KeyCode.E) && interactableObject.CompareTag("Interactable")) // If the player is near an interactable object and presses 'E'
         {
             interactableObject.GetComponent<InteractableObject>().Dialogue();
         }
@@ -23,11 +23,11 @@ public class Interactables : MonoBehaviour
 
             if (collision.collider.CompareTag("Interactable"))
             {
-                Debug.Log("Press 'E' to interact");
+                interactableObject.GetComponent<InteractableObject>().interactPrompt.SetActive(true);
             }
             else if (collision.collider.CompareTag("Door"))
             {
-                Debug.Log("Press 'M' to go through door");
+                interactableObject.GetComponent<ChangeScene>().interactPrompt.SetActive(true);
             }
         }
     }
@@ -37,6 +37,14 @@ public class Interactables : MonoBehaviour
         if (collision.gameObject == interactableObject)
         {
             canInteract = false;
+            if (collision.collider.CompareTag("Interactable"))
+            {
+                interactableObject.GetComponent<InteractableObject>().interactPrompt.SetActive(false);
+            }
+            else if (collision.collider.CompareTag("Door"))
+            {
+                interactableObject.GetComponent<ChangeScene>().interactPrompt.SetActive(false);
+            }
             interactableObject = null;
         }
     }

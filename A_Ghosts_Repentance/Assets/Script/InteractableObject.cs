@@ -16,6 +16,7 @@ public class InteractableObject : MonoBehaviour
     public bool is_choice = false;
     public string choice1;
     public string choice2;
+    public GameObject interactPrompt;
 
     void Start()
     {

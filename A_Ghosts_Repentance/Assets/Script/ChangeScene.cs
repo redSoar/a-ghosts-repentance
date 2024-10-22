@@ -7,6 +7,7 @@ public class ChangeScene : MonoBehaviour
 {
     bool hasCollided = false;
     public string nextScene;
+    public GameObject interactPrompt;
 
     // Start is called before the first frame update
     void Start()
