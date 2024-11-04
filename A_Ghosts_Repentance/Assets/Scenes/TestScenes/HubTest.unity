@@ -248,7 +248,7 @@ Transform:
   m_GameObject: {fileID: 217520195}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 2.83, z: -0.032512356}
+  m_LocalPosition: {x: 0, y: 2.83, z: -0.032512356}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -642,6 +642,7 @@ GameObject:
   - component: {fileID: 853864738}
   - component: {fileID: 853864740}
   - component: {fileID: 853864739}
+  - component: {fileID: 853864741}
   m_Layer: 0
   m_Name: EndDoor
   m_TagString: Untagged
@@ -658,7 +659,7 @@ Transform:
   m_GameObject: {fileID: 853864737}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.16247812, y: 1.5598006, z: 0.02296248}
+  m_LocalPosition: {x: -0.16247812, y: 1.42, z: 0.02296248}
   m_LocalScale: {x: 1.073, y: 1.7226444, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -761,6 +762,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &853864741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853864737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b841c195630c47a04580a164fb8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &887325708
 GameObject:
   m_ObjectHideFlags: 0
