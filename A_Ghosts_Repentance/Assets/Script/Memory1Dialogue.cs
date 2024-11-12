@@ -115,7 +115,7 @@ public class Memory1Dialogue : MonoBehaviour
 
     private void ProcessChoice(string[] chosenDialogue, bool isGoodEnding)
     {
-        dialogueLines = chosenDialogue;
+        string[] dialogueLines = chosenDialogue;
         currentDialogueIdx = 0;
         isWaitingForChoice = false;
 
