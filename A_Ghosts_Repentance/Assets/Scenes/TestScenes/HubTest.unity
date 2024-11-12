@@ -137,7 +137,7 @@ GameObject:
   - component: {fileID: 217520199}
   m_Layer: 0
   m_Name: Silhouette
-  m_TagString: Interactable
+  m_TagString: Silhouette
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2034,6 +2034,7 @@ GameObject:
   - component: {fileID: 1875543232}
   - component: {fileID: 1875543231}
   - component: {fileID: 1875543230}
+  - component: {fileID: 1875543233}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -2091,6 +2092,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1875543233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875543229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c51926626bec7a146b68666259cd5c99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2005867189
 GameObject:
   m_ObjectHideFlags: 0

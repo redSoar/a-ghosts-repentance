@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - Text
   - dialogueBox
+  - Silhouette
   layers:
   - Default
   - TransparentFX
