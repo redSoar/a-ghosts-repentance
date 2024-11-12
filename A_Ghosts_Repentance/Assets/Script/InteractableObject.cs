@@ -143,3 +143,10 @@ public class InteractableObject : MonoBehaviour
         Dialogue();                     // Continue dialogue based on choice
     }
 }
+
+
+
+
+
+
+

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
+
+
 public class Memory1Dialogue : MonoBehaviour
 {
     private int currentDialogueIdx = 0; // Track current dialogue index
@@ -115,17 +117,17 @@ public class Memory1Dialogue : MonoBehaviour
 
     private void ProcessChoice(string[] chosenDialogue, bool isGoodEnding)
     {
-        dialogueLines = chosenDialogue;
+        //dialogueLines = chosenDialogue;
         currentDialogueIdx = 0;
         isWaitingForChoice = false;
 
         if (isGoodEnding)
         {
-            dialogueLines = goodEndingDialogue;
+            //dialogueLines = goodEndingDialogue;
         }
         else
         {
-            dialogueLines = badEndingDialogue;
+            //dialogueLines = badEndingDialogue;
         }
 
         EndDialogue();
