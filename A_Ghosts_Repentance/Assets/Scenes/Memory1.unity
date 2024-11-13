@@ -2548,7 +2548,6 @@ GameObject:
   - component: {fileID: 790809590}
   - component: {fileID: 790809589}
   - component: {fileID: 790809588}
-  - component: {fileID: 790809587}
   m_Layer: 0
   m_Name: Bully
   m_TagString: Interactable
@@ -2556,59 +2555,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &790809587
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 790809586}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff6d859383c35b249a183189aa4a94f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textField: {fileID: 2023820425}
-  dialogueBox: {fileID: 172466918}
-  dialogueLines:
-  - " Bully: Nice day today, huh? Too bad you can\u2019t see the sun in my shadow,
-    shrimp! "
-  - 'Friend: l-leave me alone.......'
-  - "Bully: What\u2019s that shrimp?! Can\u2019t hear you from allllll the way down
-    there! "
-  - 'Friend: [whimpers] '
-  - 'You: ...'
-  - 'Friend: h-he-help me out here '
-  - 'Bully: Hmm? Oh, look who decided to weasel his way in. You have a problem? '
-  choiceA:
-  - 'Friend: ..p-p-please...'
-  - "Bully: Heh.. That\u2019s what I thought... But seeing you pisses me off, so
-    your friend is gonna get it! "
-  - 'Friend: Wha-huh!!?!? Please, no! '
-  - 'You: *Turns Head Away*'
-  - 'Bully: Some friend you are! HA! I guess you really have no one shri- huh!?!?? '
-  - 'Friend: *Friend gets away and runs* '
-  - "Bully: GET BACK HE- shit! *Turns to you* I guess you\u2019ll just have to take
-    his place.... "
-  choiceB:
-  - 'Bully:Aww got a lil tough guy here huh!! What are you going to do about it?! '
-  - 'You: urk!'
-  - "Bully: Yeah that\u2019s what I thought.... And just for that, your little shrimp
-    here is gonna get it! "
-  - 'Friend: Wha-huh!!?!? Please, no!  '
-  - 'You: *raises fists* leave... Leave my friend alone!*'
-  - 'Friend: *runs away* '
-  - "Bully: Oh what don\u2019t you look at that your shrimp of a \u201Cfriend\u201D
-    left you! I guess I\u2019ll just have to take it out on you!! "
-  - 'Teacher: What is going on here!  '
-  - 'Bully: Oh, shi-! '
-  - "Teacher: This is the last time! Let\u2019s go to the principal's office! "
-  - 'Friend: Thanks for sticking up for me. I know that was scary. '
-  - "You: MC: Y-yeah. I\u2019m glad you\u2019re safe. "
-  is_choice: 1
-  choice1: "Press[1]: \u201CUuhhhh... N-nothing, man....\u201D"
-  choice2: "Press [2]: ...y-y-yeah stop bullying my friend\u201D"
-  interactPrompt: {fileID: 1816550255}
 --- !u!70 &790809588
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -3782,6 +3728,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 537999793673724555, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1229961840742299460, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -6581,11 +6531,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 236922016}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1816550255 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
-  m_PrefabInstance: {fileID: 3055512617227488327}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1816550257 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
@@ -7839,7 +7784,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51dfe04b37db78347bfef51a2f2a169d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interact: {fileID: 1697403131}
+  interact: {fileID: 105558, guid: 37c108a6c38964f79a6621eccb33ddc1, type: 3}
   inkJSON: {fileID: 4900000, guid: 5a1cd015279403a45a1b53a5a422af94, type: 3}
 --- !u!61 &2027175047
 BoxCollider2D:

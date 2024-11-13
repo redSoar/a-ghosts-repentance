@@ -44,6 +44,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector3 move = Vector3.zero;
 
+        if (DialogueManager.GetInstance().dialogueIsPlaying)
+        {
+            return;
+        }
+
         if (Input.GetKey(KeyCode.A))
         {
             move.x = -1; // Move left
