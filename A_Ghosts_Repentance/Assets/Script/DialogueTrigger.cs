@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueScript : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
     [Header("Interact")]
     [SerializeField] private GameObject interact;
@@ -23,7 +23,9 @@ public class DialogueScript : MonoBehaviour
         if (playerInRange && !DialogueManager.GetInstance().dialogueIsPlaying)
         {
             interact.SetActive(true);
-            if(Input.GetKeyDown(KeyCode.E) )
+
+            // Use the new input system
+            if (FindObjectOfType<PlayerMovement>().GetInteractPressed())
             {
                 DialogueManager.GetInstance().EnterDialogueMode(inkJSON);
             }
@@ -34,22 +36,21 @@ public class DialogueScript : MonoBehaviour
         }
     }
 
-
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.CompareTag("Player"))
         {
-            playerInRange=true;
+            playerInRange = true;
+            Debug.Log("Player entered dialogue trigger.");
         }
-
     }
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        if (collider.gameObject.tag == "Player")
+        if (collider.CompareTag("Player"))
         {
             playerInRange = false;
+            Debug.Log("Player exited dialogue trigger.");
         }
     }
-
 }

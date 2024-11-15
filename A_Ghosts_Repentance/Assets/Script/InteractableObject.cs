@@ -3,6 +3,8 @@ using TMPro;
 
 public class InteractableObject : MonoBehaviour
 {
+
+ /*
     private int currentDialogueIdx = 0; // Track current dialogue index
     private bool isWaitingForChoice = false;
     private bool isInteracting = false; // State to track if interaction is in progress
@@ -142,11 +144,8 @@ public class InteractableObject : MonoBehaviour
         is_choice = false;              // Turn off choices after selection
         Dialogue();                     // Continue dialogue based on choice
     }
+
+*/
 }
-
-
-
-
-
 
 

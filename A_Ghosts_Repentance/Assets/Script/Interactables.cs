@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Interactables : MonoBehaviour
 {
+    /*
     private bool canInteract = false;
     private GameObject interactableObject;
 
@@ -48,4 +49,5 @@ public class Interactables : MonoBehaviour
             interactableObject = null;
         }
     }
+    */
 }

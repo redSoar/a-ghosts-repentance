@@ -47,7 +47,7 @@ public class DialogueManager : MonoBehaviour
             return;
         }
 
-        if(Input.GetKeyDown(KeyCode.E))
+        if(FindObjectOfType<PlayerMovement>().GetInteractPressed())
         {
             ContinueStory();
         }

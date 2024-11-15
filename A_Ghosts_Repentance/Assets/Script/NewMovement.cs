@@ -1,73 +1,57 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Speed
     public float moveSpeed = 5f;
-    Rigidbody2D rb;
+    public Rigidbody2D rb;
+    public InputAction playerControls;
+    public InputAction interact;
+    private bool interactPressed = false;
+    Vector2 moveDirection = Vector2.zero;
 
-    private void Start()
+    private void OnEnable()
     {
-        rb = GetComponent<Rigidbody2D>();
+        playerControls.Enable();
+        interact.Enable(); // Enable the interact input action
+        interact.performed += InteractPerformed; // Subscribe to the input event
+        interact.canceled += InteractCanceled;  // Optional: Handle cancellations
     }
 
-    void Update()
+    private void OnDisable()
     {
-        /*
-        Vector3 move = Vector3.zero;
+        playerControls.Disable();
+        interact.Disable();
+        interact.performed -= InteractPerformed;
+        interact.canceled -= InteractCanceled;
+    }
 
-        if (Input.GetKey(KeyCode.A))
-        {
-            move.x = -1; // Move left
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            move.x = 1;  // Move right
-        }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            move.y = 1;  // Move up
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            move.y = -1; // Move down
-        }
-
-        transform.Translate(move * moveSpeed * Time.deltaTime, Space.World);
-        */
+    private void Update()
+    {
+        moveDirection = playerControls.ReadValue<Vector2>();
     }
 
     private void FixedUpdate()
     {
-        Vector3 move = Vector3.zero;
-
-        if (DialogueManager.GetInstance().dialogueIsPlaying)
-        {
-            return;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            move.x = -1; // Move left
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            move.x = 1;  // Move right
-        }
-
-        if (Input.GetKey(KeyCode.W))
-        {
-            move.y = 1;  // Move up
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            move.y = -1; // Move down
-        }
-
-        rb.MovePosition(transform.position + move * Time.deltaTime * moveSpeed);
+        rb.velocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
     }
 
+    private void InteractPerformed(InputAction.CallbackContext context)
+    {
+        interactPressed = true;
+    }
+
+    private void InteractCanceled(InputAction.CallbackContext context)
+    {
+        interactPressed = false;
+    }
+
+    public bool GetInteractPressed()
+    {
+        bool result = interactPressed;
+        interactPressed = false; // Reset interact after checking
+        return result;
+    }
 }
