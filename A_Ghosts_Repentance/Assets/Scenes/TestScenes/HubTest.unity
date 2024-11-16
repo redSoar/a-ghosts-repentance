@@ -267,19 +267,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6d859383c35b249a183189aa4a94f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textField: {fileID: 1739301460}
-  dialogueBox: {fileID: 1103551584}
-  dialogueLines:
-  - Hey.
-  - If you haven't figured it out yet, you're dead.
-  - You can leave whenever you want, but maybe check out what's through those doors
-    first.
-  choiceA: []
-  choiceB: []
-  is_choice: 0
-  choice1: 
-  choice2: 
-  interactPrompt: {fileID: 1108416604}
 --- !u!1 &378988095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1145,11 +1132,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1103551584}
   m_CullTransparentMesh: 0
---- !u!1 &1108416604 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
-  m_PrefabInstance: {fileID: 1533875465}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1108416606 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
@@ -2242,6 +2224,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 246645185226152438, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: interact.m_Name
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 246645185226152438, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: playerControls.m_Name
+      value: Player Controls
+      objectReference: {fileID: 0}
+    - target: {fileID: 568119537251239032, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: back
+      value: 
+      objectReference: {fileID: 21300000, guid: 1bec24cf71cf68f42b1a49f89b102a14, type: 3}
+    - target: {fileID: 568119537251239032, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 21300000, guid: e488076c3df704340b9f1cc0dada4d9d, type: 3}
+    - target: {fileID: 568119537251239032, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: front
+      value: 
+      objectReference: {fileID: 21300000, guid: dc225a09cfafe9c4790f3b0749e75c5f, type: 3}
+    - target: {fileID: 568119537251239032, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 21300000, guid: a53d804d55b3a2442a5f32c068998635, type: 3}
+    - target: {fileID: 1229961840742299460, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc225a09cfafe9c4790f3b0749e75c5f, type: 3}
     - target: {fileID: 1229961840742299460, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
       propertyPath: m_SortingOrder
       value: 10
