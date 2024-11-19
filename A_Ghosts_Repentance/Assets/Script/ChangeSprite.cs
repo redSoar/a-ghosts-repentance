@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class ChangeSprite : MonoBehaviour
 {
@@ -19,23 +20,26 @@ public class ChangeSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // changes sprite based on key input
-        if (Input.GetKey(KeyCode.A))
+        if (!DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            sr.sprite = left;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            sr.sprite = right;
-        }
+            // changes sprite based on key input
+            if (Input.GetKey(KeyCode.A))
+            {
+                sr.sprite = left;
+            }
+            else if (Input.GetKey(KeyCode.D))
+            {
+                sr.sprite = right;
+            }
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            sr.sprite = back;
-        }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            sr.sprite = front;
+            if (Input.GetKey(KeyCode.W))
+            {
+                sr.sprite = back;
+            }
+            else if (Input.GetKey(KeyCode.S))
+            {
+                sr.sprite = front;
+            }
         }
     }
 }
