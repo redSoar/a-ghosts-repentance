@@ -14,6 +14,7 @@ Friend: h-he-help me out here, [MC's name]...
 
 Bully: Hmm? Oh, look who decided to weasel his way in. You have a problem?
 
+
 * [“Uuhhhh... N-nothing, man....”] -> bad_choice
 * [“...y-y-yeah stop bullying my friend”] -> good_choice
 
@@ -46,6 +47,7 @@ MC: urk!
 Bully: Yeah, that’s what I thought.... And just for that, your little shrimp here is gonna get it!
 
 Friend: Wha-huh!!?!? Please, no!
+
 
 * [*raises fists* “Leave... Leave my friend alone!”] -> good_outcome
 * [*Turns their head away*] -> bad_outcome

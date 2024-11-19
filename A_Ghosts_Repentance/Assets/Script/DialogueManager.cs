@@ -117,7 +117,7 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         canContinueToNextLine = true;
 
-        if (currentStory.currentChoices.Count > 0)
+        if (currentStory.currentChoices.Count > 0 && FindObjectOfType<PlayerMovement>().GetInteractPressed())
         {
             DisplayChoices();
         }
@@ -159,7 +159,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = ""; // Clear text when continuing story
 
             string nextLine = currentStory.Continue();
-            if (string.IsNullOrEmpty(nextLine) && !currentStory.canContinue)
+            if (string.IsNullOrEmpty(nextLine) && !currentStory.canContinue && )
             {
                 StartCoroutine(ExitDialogueMode());
             }
@@ -214,7 +214,7 @@ public class DialogueManager : MonoBehaviour
 
     private void DisplayChoices()
     {
-        if (!isTyping)
+        if (!isTyping)//Issue
         {
             // Clear the dialogue text when choices appear
             dialogueText.text = "";
