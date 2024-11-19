@@ -32,6 +32,7 @@ public class ChangeScene : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             hasCollided = true;
+            interactPrompt.SetActive(true);
         }
     }
 
@@ -40,6 +41,7 @@ public class ChangeScene : MonoBehaviour
         if (collision.collider.tag == "Player")
         {
             hasCollided = false;
+            interactPrompt.SetActive(false);
         }
     }
 }
