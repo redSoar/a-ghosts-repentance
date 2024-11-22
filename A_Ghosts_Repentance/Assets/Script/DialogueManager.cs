@@ -99,10 +99,18 @@ public class DialogueManager : MonoBehaviour
             if (isTyping)
             {
                 CompleteTyping();
+                return;
             }
-            else if (canContinueToNextLine && !waitingForChoiceInput && currentStory.currentChoices.Count == 0)
-            {
-                ContinueStory();
+            if (canContinueToNextLine) {
+
+                if (!waitingForChoiceInput && currentStory.currentChoices.Count == 0)
+                {
+                    ContinueStory();
+                }
+                else if (currentStory.currentChoices.Count > 0)
+                {
+                    DisplayChoices();
+                }
             }
         }
     }
@@ -117,10 +125,12 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         canContinueToNextLine = true;
 
-        if (currentStory.currentChoices.Count > 0 && FindObjectOfType<PlayerMovement>().GetInteractPressed())
+        /*
+        if (currentStory.currentChoices.Count > 0)
         {
             DisplayChoices();
         }
+        */
     }
 
     public void EnterDialogueMode(TextAsset inkJSON)
@@ -159,7 +169,7 @@ public class DialogueManager : MonoBehaviour
             dialogueText.text = ""; // Clear text when continuing story
 
             string nextLine = currentStory.Continue();
-            if (string.IsNullOrEmpty(nextLine) && !currentStory.canContinue && )
+            if (string.IsNullOrEmpty(nextLine) && !currentStory.canContinue)
             {
                 StartCoroutine(ExitDialogueMode());
             }
@@ -206,10 +216,12 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         canContinueToNextLine = true;
 
+        /*
         if (currentStory.currentChoices.Count > 0)
         {
             DisplayChoices();
         }
+        */
     }
 
     private void DisplayChoices()
