@@ -20,7 +20,7 @@ public class ChangeSprite : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!DialogueManager.GetInstance().dialogueIsPlaying)
+        if (!DialogueManager.GetInstance().dialogueIsPlaying && !UIManager.GetInstance().inUI)
         {
             // changes sprite based on key input
             if (Input.GetKey(KeyCode.A))

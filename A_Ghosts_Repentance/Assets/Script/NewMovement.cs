@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (!DialogueManager.GetInstance().dialogueIsPlaying)
+        if (!DialogueManager.GetInstance().dialogueIsPlaying && !UIManager.GetInstance().inUI)
         {
             moveDirection = playerControls.ReadValue<Vector2>();
         }

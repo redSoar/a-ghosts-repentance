@@ -10,6 +10,7 @@ TagManager:
   - Text
   - dialogueBox
   - Silhouette
+  - PauseBOx
   layers:
   - Default
   - TransparentFX
