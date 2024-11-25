@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Interactables : MonoBehaviour
 {
-    /*
+    
     private bool canInteract = false;
     private GameObject interactableObject;
 
@@ -40,6 +40,7 @@ public class Interactables : MonoBehaviour
             canInteract = false;
             if (collision.collider.CompareTag("Interactable"))
             {
+                Debug.Log("interacting?");
                 interactableObject.GetComponent<InteractableObject>().interactPrompt.SetActive(false);
             }
             else if (collision.collider.CompareTag("Door"))
@@ -49,5 +50,5 @@ public class Interactables : MonoBehaviour
             interactableObject = null;
         }
     }
-    */
+    
 }
