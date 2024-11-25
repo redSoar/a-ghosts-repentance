@@ -732,11 +732,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156524905}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff6d859383c35b249a183189aa4a94f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textField: {fileID: 2023820425}
+  dialogueBox: {fileID: 172466918}
+  dialogueLines: []
+  choiceA: []
+  choiceB: []
+  is_choice: 0
+  choice1: 
+  choice2: 
+  interactPrompt: {fileID: 1364939602}
 --- !u!1 &161467502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,6 +1522,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextScene: HubTest
   interactPrompt: {fileID: 580309171}
+--- !u!1 &329436727 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+  m_PrefabInstance: {fileID: 888389894}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &351853943 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
@@ -1602,6 +1616,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1252899448}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &405311728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+  m_PrefabInstance: {fileID: 1825581990}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &420813272
 GameObject:
   m_ObjectHideFlags: 0
@@ -2446,6 +2465,11 @@ GameObject:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8843492381236837720, guid: 5eb15a568755cde44b1f052dfda2bf88, type: 3}
   m_PrefabInstance: {fileID: 2580534681872731220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &585448590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+  m_PrefabInstance: {fileID: 1383365160}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &638623085
 GameObject:
@@ -4145,6 +4169,8 @@ GameObject:
   - component: {fileID: 948605417}
   - component: {fileID: 948605416}
   - component: {fileID: 948605415}
+  - component: {fileID: 948605418}
+  - component: {fileID: 948605419}
   m_Layer: 0
   m_Name: TrashBin
   m_TagString: Interactable
@@ -4265,6 +4291,40 @@ Transform:
   - {fileID: 1697403133}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &948605418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948605414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6d859383c35b249a183189aa4a94f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 2023820425}
+  dialogueBox: {fileID: 172466918}
+  dialogueLines:
+  - hbblhjvgjvihl
+  choiceA: []
+  choiceB: []
+  is_choice: 0
+  choice1: 
+  choice2: 
+  interactPrompt: {fileID: 405311728}
+--- !u!114 &948605419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948605414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f4187ae34b2ac438866648fd8f3e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &958762093
 GameObject:
   m_ObjectHideFlags: 0
@@ -6659,6 +6719,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1364939602 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+  m_PrefabInstance: {fileID: 1439157396}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1378919515
 GameObject:
   m_ObjectHideFlags: 0
@@ -9501,6 +9566,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff6d859383c35b249a183189aa4a94f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textField: {fileID: 2023820425}
+  dialogueBox: {fileID: 172466918}
+  dialogueLines:
+  - 'Eugh... this stain might be older than I am.. '
+  choiceA: []
+  choiceB: []
+  is_choice: 0
+  choice1: 
+  choice2: 
+  interactPrompt: {fileID: 585448590}
 --- !u!1 &2005067730
 GameObject:
   m_ObjectHideFlags: 0
@@ -9640,11 +9715,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2005067730}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff6d859383c35b249a183189aa4a94f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  textField: {fileID: 2023820425}
+  dialogueBox: {fileID: 172466918}
+  dialogueLines: []
+  choiceA: []
+  choiceB: []
+  is_choice: 0
+  choice1: 
+  choice2: 
+  interactPrompt: {fileID: 329436727}
 --- !u!1 &2019436279
 GameObject:
   m_ObjectHideFlags: 0
