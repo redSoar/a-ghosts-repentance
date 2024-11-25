@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3634898315493638431}
   - component: {fileID: 246645185226152438}
   - component: {fileID: 568119537251239032}
-  - component: {fileID: 4182233458582363437}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -32,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.02, y: -0.19398658, z: 0}
-  m_LocalScale: {x: 4.5431147, y: 4.5431147, z: 9.086229}
+  m_LocalScale: {x: 3.2218387, y: 3.2218387, z: 6.4436774}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -78,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: 21300000, guid: aab6ac3e6a2f01049ac80a56aa4d7697, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4ad01a5bf6fe3924782baeb40109df3b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -121,8 +120,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.10706308}
-  m_Size: {x: 0.2, y: 0.25829116}
+  m_Offset: {x: 0, y: -0.09603001}
+  m_Size: {x: 0.2, y: 0.30794004}
   m_Direction: 0
 --- !u!50 &3634898315493638431
 Rigidbody2D:
@@ -163,8 +162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6177855837e2d54db9976e01dd4d6d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 4
-  rb: {fileID: 3634898315493638431}
+  moveSpeed: 5
+  rb: {fileID: 0}
   playerControls:
     m_Name: Player Controls
     m_Type: 0
@@ -243,19 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d630ac9b8d8ef499e28a4eca56c1f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  front: {fileID: 21300000, guid: aab6ac3e6a2f01049ac80a56aa4d7697, type: 3}
-  left: {fileID: 21300000, guid: d869ff7b3233d0444b9f476e2665b90a, type: 3}
-  right: {fileID: 21300000, guid: 57766484de534a140b8fcd675691c2c2, type: 3}
-  back: {fileID: 21300000, guid: d268a3ace1cc11b40a89db6258bcf75b, type: 3}
---- !u!114 &4182233458582363437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5816769672111224913}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 25f4187ae34b2ac438866648fd8f3e1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  front: {fileID: 21300000, guid: 4ad01a5bf6fe3924782baeb40109df3b, type: 3}
+  left: {fileID: 21300000, guid: d43bde49490738e4a847b4c22c73c298, type: 3}
+  right: {fileID: 21300000, guid: 15d1afb9c1ba90748a0c2d62d9a02d29, type: 3}
+  back: {fileID: 21300000, guid: 1f081e30cb0742b449a226d0787392b8, type: 3}
