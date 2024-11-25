@@ -814,7 +814,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 2023820425}
   dialogueBox: {fileID: 172466918}
-  dialogueLines: []
+  dialogueLines:
+  - It's my old locker.
+  - I can't remember how many times I was stuffed into this
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -1531,8 +1533,8 @@ Transform:
   m_GameObject: {fileID: 312666879}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.19, y: 3.17, z: 0}
-  m_LocalScale: {x: 3.0620692, y: 3.092958, z: 1.0141}
+  m_LocalPosition: {x: 4.19, y: 3.22, z: 0}
+  m_LocalScale: {x: 3.3748665, y: 3.1018016, z: 1.0069302}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 580309172}
@@ -4456,7 +4458,10 @@ MonoBehaviour:
   textField: {fileID: 2023820425}
   dialogueBox: {fileID: 172466918}
   dialogueLines:
-  - hbblhjvgjvihl
+  - Is this the legendary Number Bin?
+  - The bin famous for being the targets of numbers 1, 2, and 3.
+  - They used to shove my head in there...
+  - I had to smell the numbers firsthand.
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -5158,6 +5163,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 568119537251239032, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: back
+      value: 
+      objectReference: {fileID: 21300000, guid: 1f081e30cb0742b449a226d0787392b8, type: 3}
+    - target: {fileID: 568119537251239032, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: left
+      value: 
+      objectReference: {fileID: 21300000, guid: d43bde49490738e4a847b4c22c73c298, type: 3}
+    - target: {fileID: 568119537251239032, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: front
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ad01a5bf6fe3924782baeb40109df3b, type: 3}
+    - target: {fileID: 568119537251239032, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: right
+      value: 
+      objectReference: {fileID: 21300000, guid: 15d1afb9c1ba90748a0c2d62d9a02d29, type: 3}
+    - target: {fileID: 1229961840742299460, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4ad01a5bf6fe3924782baeb40109df3b, type: 3}
     - target: {fileID: 1229961840742299460, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
       propertyPath: m_SortingOrder
       value: 10
@@ -9722,6 +9747,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 172466918}
   dialogueLines:
   - 'Eugh... this stain might be older than I am.. '
+  - Middle school was a pigsty
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -9874,7 +9900,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 2023820425}
   dialogueBox: {fileID: 172466918}
-  dialogueLines: []
+  dialogueLines:
+  - Didn't I stop taking notes after... wait, I know what's going on here.
+  - Looks like Anton is on a tear again...
   choiceA: []
   choiceB: []
   is_choice: 0

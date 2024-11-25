@@ -1236,6 +1236,7 @@ MonoBehaviour:
   dialogueBox: {fileID: 84686726}
   dialogueLines:
   - I got this bed because it reminds of the bed from Mineshaft
+  - I spent a lot of time cooped up here...
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -3091,7 +3092,9 @@ MonoBehaviour:
   textField: {fileID: 356305259}
   dialogueBox: {fileID: 84686726}
   dialogueLines:
-  - P.O.V You're A Worm
+  - Another day of being a complete waste of...
+  - Wait, I'm not a teenager anymore.
+  - Don't go back into old habits.
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -3236,6 +3239,16 @@ CanvasRenderer:
 Transform:
   m_CorrespondingSourceObject: {fileID: 8843492381236837720, guid: 5eb15a568755cde44b1f052dfda2bf88, type: 3}
   m_PrefabInstance: {fileID: 1568105442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &998663700 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+  m_PrefabInstance: {fileID: 1225929513}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &998663702 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+  m_PrefabInstance: {fileID: 1225929513}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1014431970
 GameObject:
@@ -3867,14 +3880,87 @@ MonoBehaviour:
   textField: {fileID: 356305259}
   dialogueBox: {fileID: 84686726}
   dialogueLines:
-  - Look at all my stuff!
-  - But no trophies...
+  - Oh man... it's all my favorite childhood things...
+  - This was my whole world after... that happened.
   choiceA: []
   choiceB: []
   is_choice: 0
   choice1: 
   choice2: 
   interactPrompt: {fileID: 1639927761}
+--- !u!1001 &1225929513
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1625029444}
+    m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_Name
+      value: Interact
+      objectReference: {fileID: 0}
+    - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.49551386
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.46191758
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.065
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.319
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
 --- !u!1 &1291816661
 GameObject:
   m_ObjectHideFlags: 0
@@ -4206,9 +4292,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1625029444}
   - component: {fileID: 1625029443}
+  - component: {fileID: 1625029446}
+  - component: {fileID: 1625029445}
   m_Layer: 0
   m_Name: window
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4277,9 +4365,78 @@ Transform:
   m_LocalPosition: {x: -1.02, y: 4.4, z: 0}
   m_LocalScale: {x: 5.236669, y: 5.6019125, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 998663702}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1625029445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625029442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff6d859383c35b249a183189aa4a94f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textField: {fileID: 356305259}
+  dialogueBox: {fileID: 84686726}
+  dialogueLines:
+  - Did I ever just look out and... appreciate the scenery?
+  - No... I was always buried in my games.
+  choiceA: []
+  choiceB: []
+  is_choice: 0
+  choice1: 
+  choice2: 
+  interactPrompt: {fileID: 998663700}
+--- !u!61 &1625029446
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1625029442}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06749141, y: -0.13448338}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.11, y: 0.54}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.9750173, y: 0.6695025}
+  m_EdgeRadius: 0
 --- !u!1 &1639927761 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
