@@ -814,7 +814,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 2023820425}
   dialogueBox: {fileID: 172466918}
-  dialogueLines: []
+  dialogueLines:
+  - "It\u2019s my old locker. How many times did I get stuffed in this...... "
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -4456,7 +4457,7 @@ MonoBehaviour:
   textField: {fileID: 2023820425}
   dialogueBox: {fileID: 172466918}
   dialogueLines:
-  - hbblhjvgjvihl
+  - This must be the legendary puke bin!
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -5222,7 +5223,10 @@ PrefabInstance:
     - {fileID: 537999793673724555, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5816769672111224913, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2092329547}
   m_SourcePrefab: {fileID: 100100000, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
 --- !u!1 &1169981173
 GameObject:
@@ -9874,7 +9878,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textField: {fileID: 2023820425}
   dialogueBox: {fileID: 172466918}
-  dialogueLines: []
+  dialogueLines:
+  - 
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -10191,6 +10196,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6, y: 0.5}
   m_EdgeRadius: 0
+--- !u!1 &2092329541 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5816769672111224913, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+  m_PrefabInstance: {fileID: 1114178798}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2092329547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2092329541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f4187ae34b2ac438866648fd8f3e1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2147381785
 GameObject:
   m_ObjectHideFlags: 0
