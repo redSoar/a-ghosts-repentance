@@ -8,11 +8,14 @@ public class ChangeScene : MonoBehaviour
     bool hasCollided = false;
     public string nextScene;
     public GameObject interactPrompt;
+    private AudioSource audioSource;
+    public AudioClip doorSound;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = doorSound;
     }
 
     // Update is called once per frame
@@ -22,7 +25,8 @@ public class ChangeScene : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.M))
             {
-                SceneManager.LoadScene(nextScene);
+                audioSource.Play();
+                Invoke("ChangeTheScene", 1);
             }
         }
     }
@@ -43,5 +47,10 @@ public class ChangeScene : MonoBehaviour
             hasCollided = false;
             interactPrompt.SetActive(false);
         }
+    }
+
+    private void ChangeTheScene()
+    {
+        SceneManager.LoadScene(nextScene);
     }
 }
