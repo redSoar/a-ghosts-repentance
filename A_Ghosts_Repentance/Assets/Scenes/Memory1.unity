@@ -4433,6 +4433,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2005067733}
     m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
       value: Interact
@@ -7396,6 +7400,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1916251670}
     m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
       value: Interact
@@ -7767,6 +7775,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 156524908}
     m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
       value: Interact
@@ -9187,6 +9199,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 948605417}
     m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
       value: Interact
@@ -10694,6 +10710,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 790809590}
     m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
       value: Interact

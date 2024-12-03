@@ -1721,6 +1721,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 510202625}
     m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
       value: Interact
@@ -2220,7 +2224,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
@@ -2347,6 +2351,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 381544000}
     m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
       value: Interact
@@ -3211,6 +3219,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1630571594}
     m_Modifications:
+    - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_SortingOrder
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
       value: Interact
@@ -4887,7 +4899,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2099709674326903765, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_SortingOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7956041148304387518, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_Name
