@@ -48,7 +48,6 @@ public class InteractableObject : MonoBehaviour
             dialogueBox.SetActive(true);
             Debug.Log("Displaying element " + currentDialogueIdx + ": " + dialogueLines[currentDialogueIdx]);
             textField.text = dialogueLines[currentDialogueIdx]; // Show current dialogue
-            textField.ForceMeshUpdate();
             currentDialogueIdx++; // Move to the next line
         }
         else if (currentDialogueIdx >= dialogueLines.Length && is_choice) // When all lines are displayed, show choices
@@ -145,5 +144,3 @@ public class InteractableObject : MonoBehaviour
 
 
 }
-
-
