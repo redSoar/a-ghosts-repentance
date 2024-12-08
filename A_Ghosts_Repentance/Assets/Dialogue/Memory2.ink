@@ -1,63 +1,115 @@
 -> start
 === start ===
-MC: What are you doing!? Put those back!! 
+(Your mom is taking all of your games! Defend the grounds!)
 
-Mom: No, I told you to do your homework! NOW GO DO IT! Also don’t you talk back to ME!! 
+You: What are you doing!? Put those back!!
 
-MC: I’ll do it later, just get off my back!! 
+Mom: Absolutely not. You've lost your privilege until you can improve your grades.
 
-Mom: Well, you left me no choice! Your last report card was horrible. REALLY failing 2 classes!! What has gotten into you? 
+You: My grades are fine!
 
- MC: School doesn’t matter.... I’m gonna be a professional gamer! 
+Mom: Have you even looked at your last report card? You failed two classes!! What's gotten into you lately?
 
- Mom: You understand how unrealistic that is right?! You need to have an education, so you can have the job you want and be able to support yourself. I know you probably hate me right now, but this is for your own good! 
+You: I don't know what you're talking about. I'm fine...
 
-* [“Ok, OK! I’ll do it. Will you give me my games back if I finish my homework?”] -> good_choice
-* [“you’re so annoying... You don’t care about me....”] -> bad_choice
+Mom: Well I can see how you failed English, because that argument isn't good enough. 
+
+You: Just get off my back! 
+
+Mom: Well, you left me no choice! You don't seem to realize how important school is. 
+
+ You: School doesn’t matter.... I can figure out things on my own! 
+
+ Mom: The past few years have shown me that you won't. You hole up in here all day and you don't show interest in anything.
+ 
+ You: What do you want from me!?
+ 
+ Mom: Well, for starters, why don't you do your homework?
+
+* [Do what she says] -> good_choice
+* [Argue back] -> bad_choice
 
 === bad_choice ===
-Mom: I do care about you. I am getting rid of these distractions because obviously they are affecting your performance in school. 
+You: You're so annoying... Stop pretending to care about me...
 
-MC: School sucks! I don’t learn anything. 
+Mom: I am your mother. Of course I care about you. But you're spending way too much time on these games.
 
-Mom: Have you tried to learn in your classes? Because looking at your report card, I don’t see effort. I see a highschooler that has done nothing but play games and goof off! 
+Mom: If you waste your time in school, it'll come back to bite you HARD in the future. You'll be stuck at a job you hate, if you even get a job at all!
 
-MC: Are you calling me stupid? SHUT UP MOM! 
+You: School sucks! I don’t learn anything. 
 
-Mom: 	DON’T TELL ME TO SHUT UP! *SLAPS MAIN CHARACTER* NOW FINISH YOUR HOMEWORK!! 	 
+Mom: I have a hard time believing that. Have you been trying your best? Have you actually TRIED to learn in your classes?
 
-MC: Never! I hate you! I’m never going to school again!!
+Mom: Honestly, I don't see that from you...
+
+You: Are you calling me stupid? SHUT UP MOM! 
+
+(Mom slaps you)
+
+Mom: DON’T SPEAK TO ME THAT WAY!!
+
+Mom: You better shape up right now!
+
+You: I don't have to listen to you!
+
+You: I hate school, and you can't make me go back ever again!
 
 -> END
 
 === good_choice ===
-Mom: I’m sorry son but you need to prove to me that you can be responsible. That means picking up your grades in your classes and maintaining those grades.  
+You: Ok, OK! I'll do it... Will you give me my games back then?
 
-MC: Why do I need to try so hard when school doesn’t help me? Nothing good ever happens to me at school! 
+Mom: No. I'm sorry, but there's a bigger problem here.
 
-Mom: Look I understand that middle school was rough, especially after you lost your friend from that argument you had. But you need to man up and go to school because the only person that is stopping you from learning is yourself!
+Mom: You need to be responsible. You need to have discipline. Until you can show that to me, I can't give you your games back.
 
-* ["But......”] -> good_outcome
-* ["Oh, so it’s MY fault!?"] -> bad_outcome
+You: Why do I have to do all that? School won't help me at all!
+
+Mom: If you actually put your best effort in it, you might feel differently.
+
+You: No, I know for sure. Nothing good has ever happened to me at school. Not since...
+
+Mom: Not since?
+
+You: ...nothing. Just leave me alone.
+
+Mom: ...
+
+Mom: Are you talking about what happened with Jason?
+
+You: !!
+
+Mom: I understand that middle school was rough, and I know having your friendship fall out didn't help that. But please, talk to me.
+
+Mom: I can't help you if you're not willing to help yourself.
+
+* [Maybe she's right...] -> good_outcome
+* [She's wrong!] -> bad_outcome
 
 === bad_outcome ===
-Mom: I am not saying it is your fault. You just need to put in some more effort on your side. If not, then I can’t help you. 
+You: OH, so it's MY fault!?
 
-MC: I don’t need your help. I don’t WANT your help. I don’t need this. I’m not going to school anymore.  
+Mom: No! That's not what I'm saying. Please just let me help you... 
 
-Mom: This is not up for negotiation! You are going to school and I don’t want to hear another peep from you for the rest of the night. Now go finish your homework! 
+You: I don’t need your help. I don’t WANT your help. I don’t need this. I’m not going to school anymore.  
 
-MC: LEAVE ME ALONE! 
+Mom: Martin... 
+
+You: LEAVE ME ALONE! 
 
 -> END
 
 === good_outcome ===
-Mom: I understand it is hard for you right now, but I want you to know that if you need anything then ask me. I will help you the best way I can or find someone that will help. 
+You: But......
 
-MC: I.... I’m scared, Mom. Everything’s so hard, and I feel so... alone. 
+Mom: I know it's hard, but I'm here for you. Just like how I want you to do your best, I want to do my best for you. 
 
-Mom: I know it does but again if you need anything tell me or your teachers. If you are struggling with classes, we can find a tutor. If you are struggling mentally, we can find a therapist. I want you to know that you are not alone.
+You: But..... what if it still doesn't work out? What if bad things keep happening?
 
-MC: ...thanks, Mom
+Mom: I guarantee you that won't happen. If you do the best you can, people will reach out to you and help you up.
+
+Mom: You already have me, your dad, and you can even talk to your teachers. You're not alone.
+
+You: ...thanks, Mom
 
 -> END
