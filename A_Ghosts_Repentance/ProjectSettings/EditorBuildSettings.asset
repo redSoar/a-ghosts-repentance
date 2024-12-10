@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Main Menu.unity
+    guid: 4cf6cad85dfe9ad4780a5d2abf10c014
+  - enabled: 1
+    path: Assets/Scenes/Purgatory.unity
+    guid: 148d66d44a749f44c84f3eaad2af95c5
+  - enabled: 1
     path: Assets/Scenes/Memory1.unity
     guid: bf42dfbf793da7647a61687206784fb1
   - enabled: 1
@@ -15,7 +21,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Memory3.unity
     guid: 928719b3f4c0cd748bd8e61bca23e286
   - enabled: 1
-    path: Assets/Scenes/Purgatory.unity
-    guid: 148d66d44a749f44c84f3eaad2af95c5
+    path: Assets/Scenes/EndPurgatory.unity
+    guid: 04c084100e9f85d4b8f93074351bd19a
+  - enabled: 1
+    path: Assets/Scenes/TheEnd.unity
+    guid: dad2e6f4bbfac644b9972915797fa465
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 9bb666470e57c93429124789c4fe1719, type: 2}

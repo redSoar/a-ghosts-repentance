@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class ColorTransition : MonoBehaviour
+public class ImageColorTransition : MonoBehaviour
 {
-    SpriteRenderer spriteRenderer;
+    Image image;
     [Range(0f, 1f)] public float lerpTime;
     public Color[] myColors;
 
@@ -15,13 +16,13 @@ public class ColorTransition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        image = GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        spriteRenderer.color = Color.Lerp(spriteRenderer.color,
+        image.color = Color.Lerp(image.color,
                 myColors[colorIndex], lerpTime * Time.deltaTime);
 
         t = Mathf.Lerp(t, 1f, lerpTime * Time.deltaTime);
@@ -33,5 +34,4 @@ public class ColorTransition : MonoBehaviour
             colorIndex = (colorIndex >= myColors.Length) ? 0 : colorIndex;
         }
     }
-
 }

@@ -1109,7 +1109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &297780667
 Transform:
   m_ObjectHideFlags: 0
@@ -2352,8 +2352,8 @@ GameObject:
   - component: {fileID: 614942576}
   - component: {fileID: 614942575}
   - component: {fileID: 614942579}
-  - component: {fileID: 614942581}
   - component: {fileID: 614942580}
+  - component: {fileID: 614942581}
   m_Layer: 0
   m_Name: Silhouette
   m_TagString: Interactable
@@ -2376,10 +2376,10 @@ MonoBehaviour:
   textField: {fileID: 1736811231}
   dialogueBox: {fileID: 1053248688}
   dialogueLines:
-  - Hey.
-  - If you haven't figured it out yet, you're dead.
-  - You can leave whenever you want, but maybe check out those doors first.
-  - You might find something meaningful...
+  - You can leave anytime you want.
+  - Go through the doors or don't go. It's up to you.
+  - But if you did go through all of them....
+  - Do you feel better?
   choiceA: []
   choiceB: []
   is_choice: 0
@@ -2492,7 +2492,7 @@ Transform:
   m_GameObject: {fileID: 614942574}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 3.7, z: -0.032512356}
+  m_LocalPosition: {x: -1.33, y: 3.7, z: -0.032512356}
   m_LocalScale: {x: 2.313, y: 2.313, z: 0.4626}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2525,7 +2525,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6258c6648197f1b45b9aa4507e3e4f63, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2620,15 +2620,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 614942574}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 35e191bf9bb791249918efad6f78a6ca, type: 3}
+  m_Script: {fileID: 11500000, guid: d4321047289ec414999f34e823dd20cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doors:
-  - {fileID: 999061599}
-  - {fileID: 297780666}
-  - {fileID: 1056600258}
-  voiceClip: {fileID: 8300000, guid: 6258c6648197f1b45b9aa4507e3e4f63, type: 3}
-  doorClip: {fileID: 8300000, guid: 64fced3979e31d444bf4bf3aec09a4ac, type: 3}
 --- !u!1 &629131515
 GameObject:
   m_ObjectHideFlags: 0
@@ -3426,7 +3420,7 @@ GameObject:
   - component: {fileID: 919718795}
   - component: {fileID: 919718798}
   - component: {fileID: 919718797}
-  - component: {fileID: 919718796}
+  - component: {fileID: 919718799}
   m_Layer: 0
   m_Name: EndDoor
   m_TagString: Untagged
@@ -3443,24 +3437,12 @@ Transform:
   m_GameObject: {fileID: 919718794}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 14.49, y: 1.28, z: 0.02296248}
-  m_LocalScale: {x: 1.073, y: 1.7226444, z: 1}
+  m_LocalPosition: {x: 0.39, y: 1.97, z: 0}
+  m_LocalScale: {x: 1.3041, y: 1.3041, z: 1.3041}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1908189543}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &919718796
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919718794}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c50b841c195630c47a04580a164fb8d5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &919718797
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3497,7 +3479,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 1.28, y: 1.28}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -3547,8 +3529,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 4
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 09a30abbbbbebda48b1e3b926729fb56, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -3558,6 +3540,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &919718799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919718794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fbead3ab8d459479ad9fa1d70fc4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnSpeed: 180
 --- !u!1 &920602617
 GameObject:
   m_ObjectHideFlags: 0
@@ -3846,7 +3841,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &999061600
 Transform:
   m_ObjectHideFlags: 0
@@ -4355,7 +4350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1056600259
 Transform:
   m_ObjectHideFlags: 0
@@ -6587,6 +6582,50 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1887755412
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1887755414}
+  - component: {fileID: 1887755413}
+  m_Layer: 0
+  m_Name: GameEnder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1887755413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887755412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c50b841c195630c47a04580a164fb8d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1887755414
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1887755412}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 15.02, y: 3.03, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895733795
 GameObject:
   m_ObjectHideFlags: 0
@@ -7072,3 +7111,4 @@ SceneRoots:
   - {fileID: 614942578}
   - {fileID: 1653023310}
   - {fileID: 1590237944}
+  - {fileID: 1887755414}
