@@ -276,12 +276,24 @@ PrefabInstance:
       value: Interact
       objectReference: {fileID: 0}
     - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.48775983
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.48775983
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.48775983
+      objectReference: {fileID: 0}
+    - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.327
+      value: 0.413
       objectReference: {fileID: 0}
     - target: {fileID: 8034832685209894850, guid: c74c54eef59abe74eb46ffb5eda55e49, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1672,6 +1684,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1229961840742299460, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
+      propertyPath: m_SortingOrder
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 5816769672111224913, guid: 37f3bbbc0de028e4eb20b0e1b03e9829, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2426,7 +2442,7 @@ GameObject:
   - component: {fileID: 822995591}
   - component: {fileID: 822995590}
   m_Layer: 0
-  m_Name: Mother (Placeholder)
+  m_Name: Mother
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2507,8 +2523,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: fa5758818509c1441a33c420943c69b3, type: 3}
+  m_SortingOrder: 5
+  m_Sprite: {fileID: 21300000, guid: cccc03018d0bb394592da5c9ddad5c7b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2529,7 +2545,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.46, y: 0.5, z: 0}
-  m_LocalScale: {x: 5.8737164, y: 5.8737164, z: 11.747433}
+  m_LocalScale: {x: 6.579737, y: 6.579737, z: 13.159474}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 93037967}
