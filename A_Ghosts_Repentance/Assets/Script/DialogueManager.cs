@@ -22,11 +22,17 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject[] choices; // Array of your 6 choice buttons
 
     private TextMeshProUGUI[] choicesText;
+    [SerializeField] private DialogueAudioInfoSO defaultAudioInfo;
+    [SerializeField] private DialogueAudioInfoSO[] audioInfos;
+    private DialogueAudioInfoSO currentAudioInfo;
+    private Dictionary<string, DialogueAudioInfoSO> audioInfoDictionary;
+    private AudioSource audioSource;
     private Story currentStory;
     public bool dialogueIsPlaying { get; private set; }
     private static DialogueManager instance;
     private bool canContinueToNextLine = false;
     private Coroutine displayLineCoroutine;
+    private const string AUDIO_TAG = "audio";
     private DialogueVariables dialogueVariables;
     private PlayerInput playerInput;
     private bool waitingForChoiceInput = false;
@@ -44,6 +50,9 @@ public class DialogueManager : MonoBehaviour
 
         playerInput = FindObjectOfType<PlayerInput>();
         dialogueVariables = new DialogueVariables(loadGlobalsJSON);
+
+        audioSource = this.gameObject.AddComponent<AudioSource>();
+        currentAudioInfo = defaultAudioInfo;
 
         // Initialize choices text array
         choicesText = new TextMeshProUGUI[choices.Length];
@@ -87,7 +96,32 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueChoicesPanel.SetActive(false);
+        InitializeAudioInfoDictionary();
         HideChoices();
+    }
+
+    private void InitializeAudioInfoDictionary()
+    {
+        audioInfoDictionary = new Dictionary<string, DialogueAudioInfoSO>();
+        audioInfoDictionary.Add(defaultAudioInfo.id, defaultAudioInfo);
+        foreach (DialogueAudioInfoSO audioInfo in audioInfos)
+        {
+            audioInfoDictionary.Add(audioInfo.id, audioInfo);
+        }
+    }
+
+    private void SetCurrentAudioInfo(string id)
+    {
+        DialogueAudioInfoSO audioInfo = null;
+        audioInfoDictionary.TryGetValue(id, out audioInfo);
+        if (audioInfo != null)
+        {
+            this.currentAudioInfo = audioInfo;
+        }
+        else
+        {
+            Debug.LogWarning("Failed to find audio info for id: " + id);
+        }
     }
 
     private void Update()
@@ -151,6 +185,7 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
+        SetCurrentAudioInfo(defaultAudioInfo.id);
         waitingForChoiceInput = false;
         isTyping = false;
         HideChoices();
@@ -191,6 +226,9 @@ public class DialogueManager : MonoBehaviour
         isTyping = true;
         canContinueToNextLine = false;
 
+        AudioClip voiceClip = currentAudioInfo.voiceSoundClip;
+        
+        audioSource.PlayOneShot(voiceClip);
         dialogueText.text = line;
         dialogueText.maxVisibleCharacters = 0;
 
@@ -308,6 +346,18 @@ public class DialogueManager : MonoBehaviour
             if (splitTag.Length != 2)
             {
                 Debug.LogError("Tag could not be appropriately parsed: " + tag);
+            }
+            string tagKey = splitTag[0].Trim();
+            string tagValue = splitTag[1].Trim();
+
+            switch (tagKey)
+            {
+                case AUDIO_TAG:
+                    SetCurrentAudioInfo(tagValue);
+                    break;
+                default:
+                    Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                    break;
             }
         }
     }

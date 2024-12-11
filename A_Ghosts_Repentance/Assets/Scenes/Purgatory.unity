@@ -5397,6 +5397,8 @@ MonoBehaviour:
   - {fileID: 1654474657}
   - {fileID: 675582775}
   - {fileID: 753871627}
+  defaultAudioInfo: {fileID: 11400000, guid: 925f214f069606240aa669559503026f, type: 2}
+  audioInfos: []
 --- !u!4 &1321730140
 Transform:
   m_ObjectHideFlags: 0
